@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "32a16a56-1f0b-4340-a0ee-925647fcf0e9",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37703012",
+		"_collection_link": "https://dark-star-452313.postman.co/workspace/Team-Workspace~1ae53732-e941-4489-8d43-6888f8f45c6a/collection/37703012-32a16a56-1f0b-4340-a0ee-925647fcf0e9?action=share&source=collection_link&creator=37703012"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "ACCESS, REFRESH",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "",
+									"description": "eng kamida 8ta ",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"description": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/authentication/token/"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "refresh",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNTc5NzYxOCwiaWF0IjoxNzI1NzExMjE4LCJqdGkiOiI1ODY5ODk4YWE2NmI0ODc2YWIzNDkyNzMxNGI0YzY5ZCIsInVzZXJfaWQiOjF9.vlcztTPVs7YopWqIXgmVmbDo07iu2eKD8IziRhYMPtg",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/authentication/token/refresh/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quiz",
+			"item": [
+				{
+					"name": "GET QUIZ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1NzE0ODE4LCJpYXQiOjE3MjU3MTEyMTgsImp0aSI6IjNhZDZkMzEwODNmODQxM2I5ZmVkMzA2N2U4NGRhMDUyIiwidXNlcl9pZCI6MX0.SXOrETCDr8lJh6AjgYt7DbJ_leTpLAnXDg7aA6UNmSg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/quiz/detail/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "WRITE QUIZ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1NzE0ODE4LCJpYXQiOjE3MjU3MTEyMTgsImp0aSI6IjNhZDZkMzEwODNmODQxM2I5ZmVkMzA2N2U4NGRhMDUyIiwidXNlcl9pZCI6MX0.SXOrETCDr8lJh6AjgYt7DbJ_leTpLAnXDg7aA6UNmSg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "1",
+									"value": "salom-olam",
+									"type": "text"
+								},
+								{
+									"key": "2",
+									"value": "salom-dunyo",
+									"type": "text"
+								},
+								{
+									"key": "3",
+									"value": "hello-world",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/answer/create/1/"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
